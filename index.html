@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gift Unboxing</title>
+    <title>Chúc Mừng Sinh Nhật!!!</title>
     <style>
         body {
             display: flex;
@@ -87,7 +87,7 @@
     </style>
 </head>
 <body>
-    <h1>Click the Box to Open Your Gift! 🎁</h1>
+    <h1>🎁 Mở Hộp Quà 🎁</h1>
     
     <div class="gift-container">
         <div class="gift-box" id="giftBox">
@@ -95,11 +95,12 @@
             <div class="box-body"></div>
             <div class="gift-content">
                 <img src="https://raw.githubusercontent.com/VinhPhmCng/hpbd-B/refs/heads/main/bach2.jpg" alt="Your Gift">
-                <a href="https://example.com/gift-link">Claim Your Gift!</a>
+                <a href="https://youtu.be/Wu8NeFXaoOc">🎁 Nhận Quà 🎁</a>
             </div>
         </div>
     </div>
 
+    <script src="confetti.js"></script>
     <script>
         const giftBox = document.getElementById('giftBox');
         
@@ -107,7 +108,20 @@
             this.classList.toggle('open');
             
             if (this.classList.contains('open')) {
-                // Add confetti or other celebration effects here
+                // start
+                const start = () => {
+                setTimeout(function() {
+                    confetti.start()
+                }, 10); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+                };
+                //  Stop
+                const stop = () => {
+                setTimeout(function() {
+                    confetti.stop()
+                }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+                };
+                start();
+                stop();
             }
         });
     </script>
